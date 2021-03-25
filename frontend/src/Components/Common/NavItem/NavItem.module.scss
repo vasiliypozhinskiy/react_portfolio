@@ -1,0 +1,47 @@
+@import "../../../variables.scss";
+
+@mixin navItem {
+  padding: 5px;
+  text-transform: uppercase;
+  position: relative;
+  font-size: $largeFontSize;
+  transition: color 0.5s linear;
+
+  &:after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.8;
+    }
+  }
+}
+
+.navItem {
+  @include navItem;
+  color: $fontColor;
+
+  &:after {
+    background-color: $hoverFontColor;
+  }
+
+  &:hover {
+    color: $hoverFontColor;
+  }
+
+  &.active {
+    color: $hoverFontColor;
+  }
+}
+
+
+
+

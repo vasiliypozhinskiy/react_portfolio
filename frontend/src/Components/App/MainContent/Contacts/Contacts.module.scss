@@ -1,0 +1,31 @@
+@import "../../../../variables.scss";
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.linkList {
+  padding: 5px;
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 32px;
+      height: 32px;
+      padding: 5px;
+    }
+
+    & a {
+      color: $fontColor;
+      transition: color 0.5s linear;
+      margin-left: 10px;
+      &:hover {
+        color: $hoverFontColor;
+      }
+    }
+  }
+}
+

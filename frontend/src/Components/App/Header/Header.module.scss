@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+@import "../../Common/NavItem/NavItem.module";
+
+.header__menu {
+  display: flex;
+  position: relative;
+  z-index: 50;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.navItem_index {
+  @include navItem;
+  color: $fontColor;
+  background-color: $backgroundColor;
+  border-radius: 0.5em;
+
+  &:hover {
+    color: $hoverFontColor;
+  }
+
+  &.active {
+    color: $indexFontColor;
+  }
+}
+

@@ -1,0 +1,80 @@
+@import "../../../../../fonts.scss";
+
+.aboutMe__container {
+  font-family: NextaScriptLight, serif;
+  @include adaptiv-font-1024(20, 10);
+  position: fixed;
+  overflow: hidden;
+  bottom: 2%;
+  right: 2%;
+  width: 50%;
+  height: 0;
+  padding-bottom: 37.37%;
+  transform: rotate(5deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  will-change: transform;
+
+  h2 {
+    margin: 10px 0 5px;
+    text-transform: none;
+    @include adaptiv-font-1024(22, 14);
+    text-align: center;
+  }
+}
+
+.leftPage {
+  position: absolute;
+  margin: 10px 30px 10px 10px;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+
+  .skills__li {
+    padding: 5px;
+
+    &:before {
+      content: "✔️";
+      display: inline-block;
+    }
+  }
+
+  .leftPage__personalData {
+    padding: 5px;
+  }
+}
+
+.rightPage {
+  position: absolute;
+  margin: 10px 10px 10px 40px;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+
+  .skills__li {
+    padding: 5px;
+
+    &:before {
+      content: "✔️";
+      display: inline-block;
+    }
+  }
+
+  .interests__list {
+    list-style-type: circle;
+    list-style-position: inside;
+
+    .interests__li {
+      padding: 3px;
+      list-style: inherit;
+    }
+  }
+}
+
+
+

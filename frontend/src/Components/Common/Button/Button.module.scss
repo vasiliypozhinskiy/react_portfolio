@@ -1,0 +1,16 @@
+@import "../../../variables.scss";
+
+.button {
+  background: $backgroundColor;
+  border: grey outset 3px;
+  border-radius: 5px;
+  color: $fontColor;
+  padding: 3px;
+  margin-left: 5px;
+
+  transition: color 0.2s linear, background 0.2s linear;
+  &:hover {
+    background: $hoverFontColor;
+    color: #1B1B1B;
+  }
+}

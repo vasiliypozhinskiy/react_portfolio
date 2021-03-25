@@ -1,0 +1,80 @@
+.animationContainer {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  .mountain, .sky, .fog, .iceberg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+
+  .mountain {
+    position: fixed;
+    background-position: center -25px;
+  }
+
+  .sky {
+    position: fixed;
+    background-position: center top;
+  }
+
+  .fog {
+    z-index: 0;
+    top: -50%;
+
+    @mixin fog_part {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      will-change: transform;
+    }
+    .fog__part1 {
+      @include fog_part;
+      left: -50%;
+    }
+    .fog__part2 {
+      @include fog_part;
+      left: 0;
+    }
+    .fog__part3 {
+      @include fog_part;
+      left: 50%;
+    }
+    .fog__part4 {
+      @include fog_part;
+      left: 100%;
+    }
+    .fog__part5 {
+      @include fog_part;
+      left: 150%;
+    }
+  }
+
+  .iceberg {
+    z-index: 5;
+    bottom: -60%;
+    background-position-y: bottom;
+  }
+
+  .cloud {
+    z-index: 0;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    will-change: transform;
+  }
+}

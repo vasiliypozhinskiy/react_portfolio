@@ -1,0 +1,43 @@
+@import "../../../../variables.scss";
+
+.projectsContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.description {
+  p {
+    margin: 5px 0;
+    padding: 5px;
+    text-align: justify;
+  }
+}
+
+.projectLinks {
+  display: flex;
+  flex-direction: column;
+  a {
+    width: fit-content;
+    margin: 0 auto;
+    transition: color 0.5s linear;
+    padding: 5px;
+    color: $linksFontColor;
+    font-size: $largeFontSize;
+
+    &:hover {
+      color: $hoverFontColor
+    }
+  }
+}
+
+.swiper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.slideDescription {
+  color: #b4b4b4;
+  margin: 5px;
+  font-size: $largeFontSize;
+  text-align: center;
+}

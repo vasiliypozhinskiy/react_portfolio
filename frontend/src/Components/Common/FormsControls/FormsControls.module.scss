@@ -1,0 +1,65 @@
+@import "../../../variables.scss";
+
+.formControl {
+  color: #ffffff;
+  font-size: $mainFontSize;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+
+  .fieldTitle {
+    padding: 5px 0 0 10px;
+  }
+
+  textarea {
+    font-size: $mainFontSize;
+    width: 100%;
+    resize: vertical;
+    min-height: 250px;
+    border: grey inset 3px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 1.5em;
+    transition: background-color 1s linear;
+
+    &:focus {
+      background-color: rgba(126, 136, 153, 0.8);
+    }
+  }
+
+  input {
+    font-size: $mainFontSize;
+    width: 100%;
+    border: grey inset 3px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 1.5em;
+    transition: background-color 1s linear;
+
+    &:focus {
+      background-color: rgba(126, 136, 153, 0.8);
+    }
+  }
+
+  &.error {
+    input, textarea {
+      animation: blinkBorder 300ms 5;
+        }
+
+    span {
+      position: absolute;
+      left: 10px;
+      color: red;
+      bottom: 0;
+    }
+
+    @keyframes blinkBorder {
+        0% {border: 3px inset #ff0000;}
+        100% {border: 3px inset grey;}
+    }
+  }
+
+  .success {
+    margin: 10px;
+  }
+}

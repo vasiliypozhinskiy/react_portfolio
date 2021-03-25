@@ -1,0 +1,72 @@
+//Pagination
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #808080;
+  opacity: 0.7;
+  @at-root button#{&} {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    appearance: none;
+  }
+  .swiper-pagination-clickable & {
+    cursor: pointer;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+}
+
+//Navigation
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #808080;
+  transition: opacity 0.3s linear;
+
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  &:after {
+    font-size: var(--swiper-navigation-size);
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+
+.swiper-container:hover {
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 1;
+  }
+}
+

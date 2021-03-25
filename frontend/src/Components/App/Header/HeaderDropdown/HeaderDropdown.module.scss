@@ -1,0 +1,76 @@
+@import "../../../../variables.scss";
+
+@mixin headerDropdown {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  font-size: $largeFontSize;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s linear;
+
+  .headerDropdown__list {
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10em;
+    z-index: 20;
+    cursor: default;
+
+    .headerDropdown__item {
+      display: block;
+      margin-top: 5px;
+      font-size: $largeFontSize;
+      width: 100%;
+      padding: 3px;
+      border-radius: 0.5em;
+      transition: color 0.2s linear;
+    }
+  }
+}
+
+.headerDropdown {
+  @include headerDropdown;
+  &:hover {
+    color: $hoverFontColor;
+  }
+
+  .headerDropdown__list {
+    .headerDropdown__item {
+      color: $fontColor;
+      background-color: $backgroundColor;
+
+      &:hover {
+        color: $hoverFontColor;
+      }
+
+    }
+  }
+}
+
+.headerDropdown_index {
+  @include headerDropdown;
+  background-color: $backgroundColor;
+  border-radius: 0.5em;
+  color: $fontColor;
+  &:hover {
+    color: $hoverFontColor;
+  }
+
+  .headerDropdown__list {
+    .headerDropdown__item {
+      color: $fontColor;
+      background-color: $backgroundColor;
+
+      &:hover {
+        color: $hoverFontColor;
+      }
+
+    }
+  }
+}
+
+

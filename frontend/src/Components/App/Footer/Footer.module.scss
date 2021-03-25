@@ -1,0 +1,16 @@
+@import "../../../variables.scss";
+@mixin footer {
+  z-index: 10;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer__container {
+  @include footer;
+}
+
+.footer__container_index {
+  @include footer;
+  color: $indexFontColor
+}
