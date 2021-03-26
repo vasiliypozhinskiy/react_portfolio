@@ -1,9 +1,8 @@
 import os
 
-
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
-    DEBUG = True
+    DEBUG = False
     MAIL_DEFAULT_SENDER = 'flaskcv@gmail.com'
     MAIL_USERNAME = 'flaskcv@gmail.com'
     MAIL_PORT = '465'
