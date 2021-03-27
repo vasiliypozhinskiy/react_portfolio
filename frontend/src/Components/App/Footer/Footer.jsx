@@ -8,7 +8,7 @@ const Footer = (props) => {
 
     return (
         <footer className={style}>
-            <span>Designed by Vasiliy Pozhinskiy © 2020</span>
+            <span>Designed by Vasiliy Pozhinskiy © 2021</span>
         </footer>
     )
 }
