@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Field, Form} from "react-final-form";
 import {FORM_ERROR} from "final-form";
 import {requiredField} from "../../../../../utils/validators";
@@ -18,12 +18,16 @@ const EmailForm = (props) => {
         }
     }
 
+    useEffect(() => {
+        setTimeout(() => setIsMessageSent(false), 5000)
+    }, [isMessageSent])
+
     return (
         <Form onSubmit={submitEmailSending}>
             {props => (
                 <form onSubmit={event => {
                     props.handleSubmit(event).then(() => {
-                        props.form.reset()
+                        props.form.restart()
                     });
                 }} className={styles.formControl}>
                     <div className={styles.fieldTitle}>
@@ -42,17 +46,17 @@ const EmailForm = (props) => {
                     <div>
                         <Field name={'emailText'}
                                component={Textarea}
-                               validate={requiredField}/>
+                               validate={requiredField}
+                        />
                     </div>
                     <div className={styles.formControl + " " + styles.error}>
                         {props.submitError && <span>{props.submitError}</span>}
                     </div>
                     <div>
-                        <Button disabled={props.invalid || props.pristine}>Send message to me</Button>
+                        <Button disabled={props.invalid || props.submitting || props.pristine}>Send message to me</Button>
                     </div>
                     {isMessageSent && <div className={styles.success}>Message sent
                     </div>}
-                    <div style={{display: "none"}}>{isMessageSent && setTimeout(() => setIsMessageSent(false), 5000)}</div>
                 </form>)}
         </Form>
     )

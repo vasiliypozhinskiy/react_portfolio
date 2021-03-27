@@ -6,16 +6,12 @@ import skyImage from "../../Assets/Images/Backgrounds/background-contacts-sky-mi
 import mountainImage from "../../Assets/Images/Backgrounds/background-contacts-mountain-min.png"
 import fogImage from "../../Assets/Images/Backgrounds/background-contacts-fog-min.png"
 import icebergImage from "../../Assets/Images/Backgrounds/background-contacts-iceberg-min.png"
-import roof from "../../Assets/Images/PhotoStack/roof-min.jpg";
-import Abkhazia from "../../Assets/Images/PhotoStack/Abkhazia-min.JPG";
-import chess from "../../Assets/Images/PhotoStack/chess-min.jpg";
-import Valday from "../../Assets/Images/PhotoStack/Valday-min.jpg";
-import Crimea from "../../Assets/Images/PhotoStack/Crimea-min.jpg";
-import Bunker from "../../Assets/Images/PhotoStack/Bunker-min.jpg";
-import Crimea2 from "../../Assets/Images/PhotoStack/Crimea-2-min.JPG";
-import Crimea3 from "../../Assets/Images/PhotoStack/Crimea-3-min.JPG";
-import Valday3 from "../../Assets/Images/PhotoStack/Valday-3-min.JPG";
-import Yalta from "../../Assets/Images/PhotoStack/Yalta-min.jpg";
+import chess from "../../Assets/Images/PhotoStack/chess.jpg";
+import Valday from "../../Assets/Images/PhotoStack/Valday.jpg";
+import Yalta from "../../Assets/Images/PhotoStack/Yalta.jpg";
+import bridge from "../../Assets/Images/PhotoStack/bridge.jpg"
+import mountain from "../../Assets/Images/PhotoStack/mountain.jpg"
+import loft from "../../Assets/Images/PhotoStack/loft.jpg"
 
 const TOGGLE_HEADER_MENU = "TOGGLE_HEADER_MENU"
 
@@ -23,9 +19,8 @@ const initState = {
     imagesForPreloading: [
         indexBackground, notepad, contactsBackground, projectsBackground,
         skyImage, mountainImage, fogImage, icebergImage,
-        roof, Abkhazia, chess, Crimea,
-        Crimea2, Crimea3, Yalta,
-        Bunker, Valday, Valday3],
+        chess, Yalta, Valday, bridge, mountain, loft
+    ],
     isHeaderMenuOpen: false
 }
 

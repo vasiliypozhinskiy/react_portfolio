@@ -13,7 +13,7 @@ const Doomanoid = (props) => {
         </div>,
         <div key={doomanoidSCR_2}>
             <img src={doomanoidSCR_2} width="100%" alt={"Screenshot_2"}/>
-            <div className={styles.slideDescription}>Каждый пятый уровень - уровень с боссом. Босс с каждым разом усиливается.</div>
+            <div className={styles.slideDescription}>Каждый пятый уровень — уровень с боссом. Босс с каждым разом усиливается.</div>
         </div>,
         <div key={doomanoidSCR_3}>
             <img src={doomanoidSCR_3} width="100%" alt={"Screenshot_3"}/>

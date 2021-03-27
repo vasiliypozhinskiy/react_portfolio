@@ -8,11 +8,11 @@
 }
 
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   display: inline-block;
   border-radius: 50%;
-  background: #808080;
+  background: white;
   opacity: 0.7;
   @at-root button#{&} {
     border: none;
@@ -28,7 +28,7 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #fff;
+  background: #00710c;
 }
 
 //Navigation
@@ -40,7 +40,7 @@
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
-  z-index: 10;
+  z-index: 20;
   cursor: pointer;
   display: flex;
   align-items: center;

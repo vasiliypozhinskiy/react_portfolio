@@ -1,13 +1,9 @@
-import roof from "../../../../../Assets/Images/PhotoStack/roof-min.jpg";
-import Abkhazia from "../../../../../Assets/Images/PhotoStack/Abkhazia-min.JPG";
-import chess from "../../../../../Assets/Images/PhotoStack/chess-min.jpg";
-import Valday from "../../../../../Assets/Images/PhotoStack/Valday-min.jpg";
-import Crimea from "../../../../../Assets/Images/PhotoStack/Crimea-min.jpg";
-import Bunker from "../../../../../Assets/Images/PhotoStack/Bunker-min.jpg";
-import Crimea2 from "../../../../../Assets/Images/PhotoStack/Crimea-2-min.JPG";
-import Crimea3 from "../../../../../Assets/Images/PhotoStack/Crimea-3-min.JPG";
-import Valday3 from "../../../../../Assets/Images/PhotoStack/Valday-3-min.JPG";
-import Yalta from "../../../../../Assets/Images/PhotoStack/Yalta-min.jpg";
+import chess from "../../../../../Assets/Images/PhotoStack/chess.jpg";
+import Valday from "../../../../../Assets/Images/PhotoStack/Valday.jpg";
+import Yalta from "../../../../../Assets/Images/PhotoStack/Yalta.jpg";
+import bridge from "../../../../../Assets/Images/PhotoStack/bridge.jpg"
+import mountain from "../../../../../Assets/Images/PhotoStack/mountain.jpg"
+import loft from "../../../../../Assets/Images/PhotoStack/loft.jpg"
 
 
 const SET_TOP_PHOTO_INDEX = "SET_TOP_PHOTO_INDEX";
@@ -16,19 +12,15 @@ const ALL_PHOTOS_GONE = "ALL_PHOTOS_GONE";
 
 const initState = {
     photos: [
-        {url: roof, width: 1296, height: 1944},
-        {url: Abkhazia, width: 4288, height: 3216},
-        {url: chess, width: 1333, height: 2000},
-        {url: Valday, width: 2560, height: 1920},
-        {url: Crimea, width: 2560, height: 1920},
-        {url: Bunker, width: 2560, height: 1920},
-        {url: Crimea2, width: 2304, height: 3072},
-        {url: Crimea3, width: 3072, height: 2304},
-        {url: Valday3, width: 3072, height: 2304},
-        {url: Yalta, width: 3648, height: 2736}
+        {url: bridge, width: 1152, height: 864},
+        {url: Yalta, width: 1152, height: 864},
+        {url: Valday, width: 1152, height: 864},
+        {url: mountain, width: 1152, height: 864},
+        {url: chess, width: 682, height: 965},
+        {url: loft, width: 1152, height: 806},
     ],
     gonePhotos: [],
-    topPhotoIndex: 9
+    topPhotoIndex: 5
 }
 
 const photoStackReducer = (state = initState, action) => {
