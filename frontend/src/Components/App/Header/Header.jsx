@@ -5,7 +5,7 @@ import NavItem from "../../Common/NavItem/NavItem";
 import {useLocation} from "react-router-dom";
 
 const Header = (props) => {
-    let location = useLocation()
+    const location = useLocation()
     let style = location.pathname === "/" ? styles.navItem_index : ""
     let activeStyle = location.pathname === "/" ? styles.active : ""
 
@@ -13,7 +13,8 @@ const Header = (props) => {
         <header>
             <div className={styles.header__menu}>
                 <NavItem styleClass={style} activeStyleClass={activeStyle} component={'NavLink'} path={'/'} text={'about me'}/>
-                <HeaderDropdown className={style}/>
+                {/*<HeaderDropdown className={style}/>*/}
+                <NavItem styleClass={style} activeStyleClass={activeStyle} component={'NavLink'} path={'/projects'} text={'projects'}/>
                 <NavItem styleClass={style} activeStyleClass={activeStyle} component={'NavLink'} path={'/contacts'} text={'contacts'}/>
             </div>
         </header>
