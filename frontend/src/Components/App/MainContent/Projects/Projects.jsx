@@ -23,7 +23,7 @@ const Projects = (props) => {
         {name: 'Packing', url: '/projects/packing', imgUrl: packingCardIMG},
         {name: 'Virtual owl museum', url: '/projects/virtual-owl-museum', imgUrl: virtualOwlMuseumIMG},
         {name: 'Project planner', url: '/projects/project-planner', imgUrl: projectPlannerIMG},
-        {name: 'Get recipe', url: '/projects/project-planner', imgUrl: getRecipeIMG},
+        {name: 'Get recipe', url: '/projects/get-recipe', imgUrl: getRecipeIMG},
         {name: 'Typing trainer', url: '/projects/typing-trainer', imgUrl: typingTrainerIMG},
     ]
 
